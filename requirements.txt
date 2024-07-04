@@ -8,3 +8,9 @@ langserve
 fastapi
 uvicorn
 sse_starlette
+
+sentence-transformers
+pypdf
+bs4
+chromadb
+faiss-cpu
