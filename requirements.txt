@@ -18,3 +18,6 @@ faiss-cpu
 arxiv
 wikipedia
 langchainhub
+requests
+beautifulsoup4
+googlesearch-python
