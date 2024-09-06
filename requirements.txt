@@ -21,3 +21,11 @@ langchainhub
 requests
 beautifulsoup4
 googlesearch-python
+
+Flask
+
+streamlit_webrtc
+SpeechRecognition
+gtts
+sounddevice 
+scipy 
