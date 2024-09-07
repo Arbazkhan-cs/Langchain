@@ -1,12 +1,10 @@
-from flask import Flask, request, jsonify, send_file, render_template
+from flask import Flask, jsonify, send_file, render_template
 import sounddevice as sd
 import numpy as np
-import scipy.io.wavfile as wav
 import threading
 import tempfile
 import speech_recognition as sr
 from gtts import gTTS
-import os
 import wave
 from langchain_groq import ChatGroq
 from langchain.prompts import ChatPromptTemplate
@@ -119,26 +117,20 @@ def stop_recording():
         wav_file_path = save_wav_file(np.concatenate(recording_data), 44100)
         text = convert_audio_to_text(wav_file_path)
         
-        # Load the language model
         model = load_model()
         
-        # Create the prompt template
         prompt = create_prompt_template()
         
-        # Prepare context
         if len(previous_contexts) > 1:
             previous_context = f"{previous_contexts[-2]} {previous_contexts[-1]}"
         else:
             previous_context = previous_contexts[-1] if previous_contexts else ""
 
-        # Format the prompt with the user's text input and previous contexts
         formatted_prompt = prompt.format(previous_context=previous_context, input=text)
         
-        # Print formatted prompt for debugging
         print("Formatted Prompt:", formatted_prompt)
         
         try:
-            # Generate chatbot response
             chatbot_response = model.invoke(formatted_prompt)
             # print("Chatbot Response:", chatbot_response)
             
