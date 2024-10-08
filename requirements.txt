@@ -29,3 +29,8 @@ SpeechRecognition
 gtts
 sounddevice 
 scipy 
+
+crewai
+langchain_openai
+tavily-python
+crewai_tools
