@@ -1,0 +1,22 @@
+2024-10-27 11:22:12,711 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2024-10-27 11:22:12,712 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2024-10-27 11:22:21,640 - faiss.loader - INFO - Loading faiss.
+2024-10-27 11:22:21,831 - faiss.loader - INFO - Successfully loaded faiss.
+2024-10-27 11:22:39,081 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2024-10-27 11:22:39,145 - __main__ - ERROR - Error getting answer: Got multiple output keys: dict_keys(['answer', 'source_documents']), cannot determine which to store in memory. Please set the 'output_key' explicitly.
+2024-10-27 11:23:22,114 - __main__ - INFO - Added new QA pair - Q: How many square feet is the average adult human’s skin?
+2024-10-27 11:23:28,324 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2024-10-27 11:23:28,332 - __main__ - ERROR - Error getting answer: Got multiple output keys: dict_keys(['answer', 'source_documents']), cannot determine which to store in memory. Please set the 'output_key' explicitly.
+2024-10-27 11:23:42,407 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2024-10-27 11:23:42,415 - __main__ - ERROR - Error getting answer: Got multiple output keys: dict_keys(['answer', 'source_documents']), cannot determine which to store in memory. Please set the 'output_key' explicitly.
+2024-10-27 11:24:54,422 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2024-10-27 11:24:54,423 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2024-10-27 11:25:03,315 - faiss.loader - INFO - Loading faiss.
+2024-10-27 11:25:03,381 - faiss.loader - INFO - Successfully loaded faiss.
+2024-10-27 11:25:08,267 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2024-10-27 11:25:08,308 - __main__ - ERROR - Error getting answer: Got multiple output keys: dict_keys(['answer', 'source_documents']), cannot determine which to store in memory. Please set the 'output_key' explicitly.
+2024-10-27 11:25:15,568 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2024-10-27 11:25:15,573 - __main__ - ERROR - Error getting answer: Got multiple output keys: dict_keys(['answer', 'source_documents']), cannot determine which to store in memory. Please set the 'output_key' explicitly.
+2024-10-27 11:25:25,411 - __main__ - INFO - Added new QA pair - Q: What does cartilage link?
+2024-10-27 11:25:31,134 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2024-10-27 11:25:31,142 - __main__ - ERROR - Error getting answer: Got multiple output keys: dict_keys(['answer', 'source_documents']), cannot determine which to store in memory. Please set the 'output_key' explicitly.

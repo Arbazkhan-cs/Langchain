@@ -1,0 +1,7 @@
+{
+    "model_name": "llama3-8b-8192",
+    "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+    "temperature": 0.5,
+    "similarity_threshold": 0.7,
+    "max_history": 10
+}
