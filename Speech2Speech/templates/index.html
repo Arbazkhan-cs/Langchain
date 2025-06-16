@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio Recorder</title>
+    <script>
+        let recording = false;
+
+        function startRecording() {
+            fetch('/start_recording', {
+                method: 'POST',
+            }).then(response => response.json())
+              .then(data => {
+                  if (data.status === 'Recording started.') {
+                      recording = true;
+                      document.getElementById('status').innerText = 'Recording...';
+                  } else {
+                      alert('Error starting recording');
+                  }
+              });
+        }
+
+        function stopRecording() {
+            if (!recording) return;
+
+            fetch('/stop_recording', {
+                method: 'POST',
+            }).then(response => {
+                if (response.ok) {
+                    return response.blob();
+                } else {
+                    alert('Error stopping recording');
+                }
+            }).then(blob => {
+                const url = URL.createObjectURL(blob);
+                const audio = new Audio(url);
+                audio.play();
+                document.getElementById('status').innerText = 'Recording stopped. Playing response...';
+            });
+        }
+    </script>
+</head>
+<body>
+    <h1>Audio Recorder</h1>
+    <button onclick="startRecording()">Start Recording</button>
+    <button onclick="stopRecording()">Stop Recording</button>
+    <p id="status">Idle</p>
+</body>
+</html>
