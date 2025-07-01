@@ -37,3 +37,5 @@ tavily-python
 crewai_tools
 
 grandalf
+duckduckgo-search 
+langchain_experimental
